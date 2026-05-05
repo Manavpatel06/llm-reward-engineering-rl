@@ -1,0 +1,56 @@
+Method Section
+
+Prior work has already shown that LLMs can generate reward code from text (for example, EUREKA and Text2Reward). This project focuses on the remaining gap: systematic reliability under fixed budgets and reproducible baselines.
+
+We evaluate four Gymnasium domains:
+- CartPole-v1
+- LunarLander-v3
+- MountainCar-v0
+- Blackjack-v1 (added as a more human-understandable game domain)
+
+For each environment, we compare four conditions:
+- random policy baseline
+- default environment reward
+- human-shaped reward
+- one-shot LLM-generated reward
+
+All trainable conditions use PPO (Stable-Baselines3), fixed hyperparameters, and 5 seeds. Training budgets are:
+- CartPole-v1: 100k
+- LunarLander-v3: 250k
+- MountainCar-v0: 200k
+- Blackjack-v1: 150k
+
+LLM rewards are generated one-shot from prompt specifications and validated with syntax/runtime checks before training. Failures are recorded explicitly.
+
+Evaluation uses a common metric: default environment return. We report:
+- final performance (mean +/- std)
+- sample efficiency (timesteps to threshold)
+- success rate across seeds
+- failure-mode label
+
+Failure taxonomy:
+- syntax/runtime invalid
+- truncation/incomplete output
+- underspecification
+- reward hacking/exploit
+- magnitude mismatch
+
+Prompt variation is run on Blackjack-v1 with three styles:
+- vague
+- detailed
+- hint-based
+
+Table 1. Environment Setup and Success Criteria
+- CartPole-v1: Dense/easy, 100,000 steps, threshold 475
+- LunarLander-v3: Intermediate, 250,000 steps, threshold 200
+- MountainCar-v0: Sparse/hard, 200,000 steps, threshold -110
+- Blackjack-v1: Human-understandable card game, 150,000 steps, threshold 0.05
+
+Table 2. Experiment Matrix
+- E1 (Core benchmark): Random vs Default vs Human vs LLM, all 4 environments, 5 seeds
+- E2 (Prompt sensitivity): LLM prompt variation (vague/detailed/hint-based), Blackjack-v1, 5 seeds
+- E3 (Failure analysis): LLM failure taxonomy across all evaluated domains
+
+References
+[1] EUREKA: https://arxiv.org/abs/2310.12931
+[2] Text2Reward: https://arxiv.org/abs/2309.11489

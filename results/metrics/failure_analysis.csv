@@ -1,0 +1,5 @@
+environment,auto_failure_label,generation_status,finish_reason,detail
+CartPole-v1,magnitude_mismatch,ok,STOP,valid function
+LunarLander-v3,underspecification,ok,STOP,valid function
+MountainCar-v0,reward_hacking,ok,STOP,valid function
+Blackjack-v1,reward_hacking,ok,STOP,valid function

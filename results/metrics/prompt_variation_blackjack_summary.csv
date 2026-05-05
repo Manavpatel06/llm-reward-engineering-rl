@@ -1,0 +1,4 @@
+prompt,status,n_seeds,final_eval_mean,final_eval_std,sample_efficiency_median_steps,success_rate
+vague,syntax_runtime_invalid,0,,,,
+detailed,ok,5,-0.08,0.10509255180289631,20000.0,1.0
+hint_based,ok,5,0.04666666666666667,0.14659088951530683,25000.0,1.0

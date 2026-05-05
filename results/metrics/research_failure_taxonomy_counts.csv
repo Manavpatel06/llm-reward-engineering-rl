@@ -1,0 +1,4 @@
+auto_failure_label,count,rate
+reward_hacking,2,0.5
+magnitude_mismatch,1,0.25
+underspecification,1,0.25

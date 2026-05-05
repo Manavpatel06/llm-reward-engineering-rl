@@ -1,0 +1,4 @@
+group,total_prompts,ok_count,ok_rate,syntax_runtime_invalid_count,truncation_incomplete_count
+core_env_prompts,4,4,1.0,0,0
+prompt_variation_prompts,6,3,0.5,3,0
+combined,10,7,0.7,3,0

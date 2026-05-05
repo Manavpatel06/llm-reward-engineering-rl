@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Local env
+.venv/
+venv/
+env/
+.env
+.env.*
+*.env
+!.env.example
+secrets/
+*.pem
+*.key
+
+# Notebook noise
+*.ipynb_checkpoints
+
+# Large experiment outputs
+models/
+ollama_models/
+results/artifacts/
+results/figures/
+results/logs/
+data/interim/*
+data/processed/*
+reports/*
+references/*
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!reports/.gitkeep
+!references/.gitkeep
+
+# Keep metrics tracked if desired; comment this if you want CSV ignored
+# results/metrics/
+
+# Local packaging artifacts
+llm_reward_project_sol_*.tar.gz

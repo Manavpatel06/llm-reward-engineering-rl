@@ -1,0 +1,10 @@
+{
+  "project_root": "..",
+  "notebook_path": "notebooks/Plannin_project_v3.ipynb",
+  "log_path": "results/logs/run_v3_sol.log",
+  "cells_to_run": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+  "env": {
+    "OLLAMA_MODELS": "${PROJECT_ROOT}/ollama_models",
+    "OLLAMA_MODEL": "qwen2.5:1.5b"
+  }
+}

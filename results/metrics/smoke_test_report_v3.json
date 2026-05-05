@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-14T11:45:52.522991",
+  "status": "passed",
+  "tests": {
+    "default_train": {
+      "ok": true,
+      "n_runs": 1,
+      "n_eval_points": 2,
+      "last_eval_return": -1.0,
+      "model_path": "E:\\Planning_AI\\Project\\models\\Blackjack_v1_smoke_default_blackjack_s0.zip"
+    },
+    "human_train": {
+      "ok": true,
+      "n_runs": 1,
+      "n_eval_points": 2,
+      "last_eval_return": -1.0,
+      "model_path": "E:\\Planning_AI\\Project\\models\\Blackjack_v1_smoke_human_blackjack_v3check_s0.zip"
+    },
+    "llm_pipeline": {
+      "generation_status": "syntax_runtime_invalid",
+      "finish_reason": "UNKNOWN",
+      "detail": "Compile error: invalid syntax (<llm_reward>, line 6)",
+      "code_preview": "def custom_reward(obs, action, default_reward, next_obs, done, info):\n    player_sum = obs[0]\n    dealer_showing = obs[1]\n    usable_ace = obs[2]\n\n    if (player_sum + 11 > 21 and usable_ace) or (dealer_showing == 1 && next_obs[0] < player_",
+      "train_ok": false,
+      "n_runs": 0,
+      "n_eval_points": 0,
+      "last_eval_return": null,
+      "model_path": null
+    }
+  }
+}
